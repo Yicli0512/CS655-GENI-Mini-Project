@@ -1,15 +1,9 @@
 import requests
 import matplotlib
-import time
 import os
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from datetime import datetime
-
-#transfer datetime object into sum of seconds, which will be used in plotting
-def getSecond(time):
-    ftr = [3600, 60, 1]
-    return sum([a * b for a, b in zip(ftr, map(float, time.strftime("%H:%M:%S").split(':')))])
 
 proxies = {
         "http": "http://10.10.1.2:8080",
