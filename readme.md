@@ -57,7 +57,7 @@ On cache node, run the following command to start the cache server.
     sudo rm server.lock  
 Then repeat the command which starts the cache server.   
 
-On client node, upload withCache.py to the node and run it.
+On client node, download _withCache.py_ and run it.
 
     sudo wget https://raw.githubusercontent.com/Yicli0512/CS655-GENI-Mini-Project/master/withCache.py
     python withCache.py
