@@ -39,8 +39,9 @@ Then press ‘Esc’ to stop editing. And input _:wp_ to quit the file.
 Step 3 -- run experiment without cache 
 ---------------------------
 
-On client node, upload _withoutCache.py_ to the node and run it.
+On client node, download _withoutCache.py_ and run it.
 
+    sudo wget https://raw.githubusercontent.com/Yicli0512/CS655-GENI-Mini-Project/master/withoutCache.py
     python withoutCache.py
 
 Step 4 -- run experiment with cache 
@@ -50,7 +51,13 @@ On cache node, run the following command to start the cache server.
 
     cd /usr/bin
     sudo ./traffic_server start
- 
+ If you cannot acquire lock file, run the following command:
+
+    cd /var/run/trafficserver/
+    sudo rm server.lock  
+Then repeat the command which starts the cache server.   
+
 On client node, upload withCache.py to the node and run it.
 
+    sudo wget https://raw.githubusercontent.com/Yicli0512/CS655-GENI-Mini-Project/master/withCache.py
     python withCache.py
